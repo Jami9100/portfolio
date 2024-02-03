@@ -7,6 +7,50 @@
     <title>portfolio webiste</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/ab785e35a9.js" crossorigin="anonymous"></script>
+    <style>
+        .testimonial-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background: #262626;
+        padding: 30px;
+        font-size: 13px;
+        font-weight: 300;
+        border-radius:10px;
+        transition: background 0.5s,transform 0.5s ;
+        }
+        
+        /* Styles for each testimonial */
+        .testimonial {
+            width: 33.33%; /* Show three testimonials side by side */
+            float: left;
+            transition: transform 0.5s ease;
+        }
+        
+        /* Styles for slider buttons */
+        .slider-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            z-index: 1;
+        }
+        
+        /* Styles for previous button */
+        .prev {
+            left: 0;
+        }
+        
+        /* Styles for next button */
+        .next {
+            right: 0;
+        }
+    </style>
+    </head>
+    
 </head>
 <body>
 <div id="header">
@@ -20,6 +64,10 @@
                 <li><a href="#portfolio">My Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="counter"
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=11163131&style=0009&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>  
+</div>  
         </nav>
         <div class-"header-text">
             <p>Web Developer</p>
@@ -146,6 +194,22 @@
         </div>
     </div>
 </div>
+<section>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <h2>Testimonial 1</h2>
+            <p>Working with jashu is just great,every problem in my house is solved in a matter of days</p>
+        </div>
+        <div class="testimonial">
+            <h2>Testimonial 2</h2>
+            <p>I am great to see your website ,So happy</p>
+        </div>
+        <div class="testimonial">
+            <h2>Testimonial 3</h2>
+            <p>Thank for your valuable Information</p>
+        </div>
+    </div>
+</section>
 <script>
     var tablinks=document.getElementsByClassName("tab-links");
     var tabcontents=document.getElementsByClassName("tab-contents");
@@ -180,5 +244,24 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("testimonial");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.transform = `translateX(${(i - slideIndex) * 100}%)`;
+        }
+        slideIndex++;
+        if (slideIndex >= slides.length) { slideIndex = 0; }
+        setTimeout(showSlides, 3000); // Change slide every 3 seconds
+    }
+
+    function moveSlider(direction) {
+        slideIndex += direction;
+        showSlides();
+    }
+</script>
 </body>
 </html>
