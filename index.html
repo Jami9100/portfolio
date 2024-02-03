@@ -146,6 +146,14 @@
         </div>
     </div>
 </div>
+    <div class="counter">
+        <span id="pageviews-count">0</span>
+        <h4>Pageviews</h4>
+    </div>
+    <div class="counter">
+        <span id="visits-count">0</span>
+        <h4>Visits</h4>
+    </div>
 <script>
     var tablinks=document.getElementsByClassName("tab-links");
     var tabcontents=document.getElementsByClassName("tab-contents");
@@ -180,5 +188,14 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+    // index.js
+    <script>
+var counterContainer = document.querySelector(".website-counter");
+var visitCount = localStorage.getItem("page_view") || 1;
+
+visitCount = Number(visitCount) + 1;
+localStorage.setItem("page_view", visitCount);
+counterContainer.innerHTML = visitCount;
+    </script>
 </body>
 </html>
