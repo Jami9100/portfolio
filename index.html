@@ -20,6 +20,11 @@
                 <li><a href="#portfolio">My Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="counter">
+                <!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+<img src="https://hitwebcounter.com/counter/counter.php?page=11163131&style=0009&nbdigits=5&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>       
+            </div>
         </nav>
         <div class-"header-text">
             <p>Web Developer</p>
@@ -146,14 +151,6 @@
         </div>
     </div>
 </div>
-    <div class="counter">
-        <span id="pageviews-count">0</span>
-        <h4>Pageviews</h4>
-    </div>
-    <div class="counter">
-        <span id="visits-count">0</span>
-        <h4>Visits</h4>
-    </div>
 <script>
     var tablinks=document.getElementsByClassName("tab-links");
     var tabcontents=document.getElementsByClassName("tab-contents");
@@ -188,14 +185,5 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
-    // index.js
-    <script>
-var counterContainer = document.querySelector(".website-counter");
-var visitCount = localStorage.getItem("page_view") || 1;
-
-visitCount = Number(visitCount) + 1;
-localStorage.setItem("page_view", visitCount);
-counterContainer.innerHTML = visitCount;
-    </script>
 </body>
 </html>
